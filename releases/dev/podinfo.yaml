@@ -1,4 +1,3 @@
----
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
@@ -10,11 +9,9 @@ metadata:
 spec:
   releaseName: podinfo-dev
   chart:
-    git: git@github.com:benke33/gitops-helm
+    git: git@github.com:benke33/helm-operator-get-started
     path: charts/podinfo
     ref: master
   values:
-    image: zomgplz/podinfo:dev-hdtwcel9
+    image: zomgplz/podinfo:dev-kuxz5ohy
     replicaCount: 1
-    hpa:
-      enabled: false
